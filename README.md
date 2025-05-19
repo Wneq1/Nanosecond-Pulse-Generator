@@ -14,9 +14,9 @@ The generator will consist of four basic blocks. The first block is a rectangula
 
 Rectangular Wave Generator Circuit:
 The simplest rectangular wave generator circuit can be built using just three components: a resistor, a capacitor, and a NOT gate with a Schmitt trigger input. Circuits equipped with a Schmitt trigger input are characterized by hysteresis. Hysteresis is a phenomenon where the gate switches at different threshold voltage levels for the rising and falling edges of the signal. Therefore, for circuits with a Schmitt trigger input, threshold voltages for both edges and the hysteresis range are specified.
-<div align="center">
+
 ![image](https://github.com/user-attachments/assets/49f4c7e1-2c06-4134-b230-ce39b0c8db2c)
-</div>
+
 The simplest generator circuit is shown above. The operating principle of this circuit is very straightforward. Let’s assume that the switching thresholds of the Schmitt trigger gate are as follows: it switches from 1 to 0 when the input voltage exceeds 1.6 V, and from 0 to 1 when it drops to 0.8 V.
 
 At the very beginning, the capacitor is discharged, so the voltage at the input is 0 V, which is lower than the 0.8 V threshold required to switch from 0 to 1. Therefore, the output is at a high state. When the output is high, the capacitor starts charging through the resistor until the voltage exceeds 1.6 V, triggering a state change. This cycle repeats continuously.
@@ -27,3 +27,16 @@ $f_0 = 1.2 / (R_1 * C_1)$
 
 ​Delay Line:
 The primary purpose of the delay line is to deliver two signals to the exclusive OR (XOR) circuit with an appropriate time shift. In this project, the output from the generator is fed directly into the XOR gate, while the second connection is realized through two NOT gates. It should be noted that the signals at the input of the path have the same phase but are slightly delayed due to the use of the double NOT gates. The signal delay time depends solely on the propagation delays of the NOT gates used, which provide the necessary timing difference.
+![image](https://github.com/user-attachments/assets/29a8d6e0-926f-4c29-aee4-abd5d49f3a6e)
+
+XOR Gate:
+The XOR gate generates a short pulse (called a spike pulse) each time there is an edge on the output signal of the relaxation oscillator. Based on the XOR truth table, when its inputs are at different logic levels (one input is high while the other is delayed by the NOT inverters), the output goes high. This high state lasts until the delayed input also changes state, effectively turning off the generator. When both inputs are either high or low simultaneously, the output remains at 0, producing no pulse. These pulses appear in pairs, as each pulse corresponds to both the rising and falling edges of the oscillator’s output signal. The XOR gate is used here for precise detection of signal state changes, enabling the generation of very short output pulses.
+![image](https://github.com/user-attachments/assets/1daba656-c69c-4344-b97e-21f7cfdcaf4d)
+
+Output Buffer:
+Since the output of the generator is not intended to drive a heavy load, it was decided to increase the current-driving capability of the circuit by adding additional NOT gates at the output. The typical current capability of a standard logic gate ranges from about 5 to 10 mA, so it was necessary to increase this capacity to protect the circuit from accidental overload.
+
+At the output of the XOR gate, there is a NOT gate that inverts the input signal. Following this, the actual buffer consists of three NOT gates connected in parallel. Resistors are placed at their outputs to provide impedance matching for the proper output, and a connector allows the addition of an external resistor if needed.
+
+The complete generator schematic is shown below:
+![image](https://github.com/user-attachments/assets/7043d8ed-1786-4c7d-9272-873e308068ac)
