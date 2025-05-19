@@ -88,3 +88,22 @@ As shown in the image above, the generator is connected directly to the oscillos
 
 ![image](https://github.com/user-attachments/assets/00181c94-dcfe-4346-b97e-46a5411961ef)
 
+The oscilloscope waveform shown above indicates a peak amplitude of approximately 4.58 V, which is close to the supply voltage. The rise and fall times are around 1.9 ns, and the total pulse width is approximately 3.6 ns. These are satisfactory results given the components used in the circuit.
+
+
+Finally, let us take a look at an example measurement that this device enables — cable length testing. In the context of such measurements, the key parameter is the propagation velocity factor, which for most cables is approximately 0.7. This value is especially important when calculating the actual length of the tested cable, as it directly affects measurement accuracy. For this test, a 1-meter coaxial cable is used.
+
+The formula needed to calculate the cable length is:
+
+$l = (c × v_p × t_m) / 2$
+
+Where:
+l – cable length
+
+c – speed of light in vacuum (≈ 3×10⁸ m/s)
+
+v_p – velocity factor (propagation speed in the medium)
+
+t_m – time between the initial and reflected pulse
+
+The propagation speed in coaxial cables is reduced to approximately 70% of the speed of light due to the dielectric material and the construction of the cable itself.
