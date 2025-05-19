@@ -23,7 +23,7 @@ At the very beginning, the capacitor is discharged, so the voltage at the input 
 
 The operating frequency is determined by the following formula, where C1 is the capacitance of the oscillating capacitor, and R1 is the resistance value in the feedback loop:
 
-$\sqrt{3x-1}+(1+x)^2$
+$\f_0 = 1.2 / (R_1 * C_1)$
 
 ​Delay Line:
 The primary purpose of the delay line is to deliver two signals to the exclusive OR (XOR) circuit with an appropriate time shift. In this project, the output from the generator is fed directly into the XOR gate, while the second connection is realized through two NOT gates. It should be noted that the signals at the input of the path have the same phase but are slightly delayed due to the use of the double NOT gates. The signal delay time depends solely on the propagation delays of the NOT gates used, which provide the necessary timing difference.
