@@ -58,3 +58,33 @@ PCB Design:
 
 The design will be carried out in the KiCad environment due to several key advantages. First and foremost, KiCad offers an intuitive and user-friendly interface that allows even beginners to start working on a project quickly. This makes the design process less time-consuming and more efficient.
 Another important advantage of KiCad is the ability to visualize the project at every stage of work. This makes it easy to control the placement of components and routing of tracks, significantly minimizing the risk of errors and allowing for quick corrections. The software also provides extensive libraries of electronic components, which are regularly updated, greatly facilitating the selection and placement of the right parts. Additionally, KiCad allows easy generation of various production files such as Gerber files, drill files, and technical documentation, streamlining the process of ordering PCBs from manufacturers. It is also worth emphasizing that KiCad offers circuit simulation functionality, enabling preliminary testing of the circuit operation before creating a physical board. All these features together make using KiCad not only convenient but also economical and efficient.
+
+![image](https://github.com/user-attachments/assets/b6e85c62-e7ba-4753-85f0-866616d6becb)
+
+The schematic is shown above, with component values indicated as well as a goldpin connector used to adjust the output resistance for proper impedance matching with the tested cable.
+Below is the view of the PCB after the design phase:
+
+![image](https://github.com/user-attachments/assets/369a7a27-8cfd-4c86-8b49-07a547287274)
+
+![image](https://github.com/user-attachments/assets/ab50185a-4d2c-4506-83b4-c5741b128609)
+
+![image](https://github.com/user-attachments/assets/8f7e874b-db91-437c-8521-663ee316174c)
+
+Visualization of the PCB Layout:
+
+![image](https://github.com/user-attachments/assets/90e8ba73-8e6d-47fa-ab2f-5fe20e72c5ce)
+
+![image](https://github.com/user-attachments/assets/68a183dc-8b17-46bf-a526-69416eb0e49d)
+
+View of the Assembled and Soldered PCB:
+
+![image](https://github.com/user-attachments/assets/8f3f4816-7f4c-4c6f-9817-038cd77037af)
+
+Demonstration of the Circuit Operation:
+
+![image](https://github.com/user-attachments/assets/90a7c85f-1235-4cfc-9ce8-15dad714b043)
+
+As shown in the image above, the generator is connected directly to the oscilloscope through a T-connector, with one output terminated using a 50-ohm resistor to ensure proper impedance matching with the tested cable. When testing a coaxial cable, the terminator is replaced with the cable under test, and the resulting waveforms are observed on the oscilloscope.
+
+![image](https://github.com/user-attachments/assets/00181c94-dcfe-4346-b97e-46a5411961ef)
+
