@@ -27,10 +27,12 @@ $f_0 = 1.2 / (R_1 * C_1)$
 
 ​Delay Line:
 The primary purpose of the delay line is to deliver two signals to the exclusive OR (XOR) circuit with an appropriate time shift. In this project, the output from the generator is fed directly into the XOR gate, while the second connection is realized through two NOT gates. It should be noted that the signals at the input of the path have the same phase but are slightly delayed due to the use of the double NOT gates. The signal delay time depends solely on the propagation delays of the NOT gates used, which provide the necessary timing difference.
+
 ![image](https://github.com/user-attachments/assets/29a8d6e0-926f-4c29-aee4-abd5d49f3a6e)
 
 XOR Gate:
 The XOR gate generates a short pulse (called a spike pulse) each time there is an edge on the output signal of the relaxation oscillator. Based on the XOR truth table, when its inputs are at different logic levels (one input is high while the other is delayed by the NOT inverters), the output goes high. This high state lasts until the delayed input also changes state, effectively turning off the generator. When both inputs are either high or low simultaneously, the output remains at 0, producing no pulse. These pulses appear in pairs, as each pulse corresponds to both the rising and falling edges of the oscillator’s output signal. The XOR gate is used here for precise detection of signal state changes, enabling the generation of very short output pulses.
+
 ![image](https://github.com/user-attachments/assets/1daba656-c69c-4344-b97e-21f7cfdcaf4d)
 
 Output Buffer:
