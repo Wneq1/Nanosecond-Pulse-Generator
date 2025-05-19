@@ -112,53 +112,5 @@ The propagation speed in coaxial cables is reduced to approximately 70% of the s
 
 With all necessary data available, we can proceed with the basic calculation:
 
-$𝑙
-=
-3
-⋅
-10
-8
- 
-[
-m/s
-]
-⋅
-0.7
-⋅
-10.2
-⋅
-10
-−
-9
- 
-[
-s
-]
-2
-=
-2.142
- 
-[
-m
-]
-2
-=
-1.071
- 
-[
-m
-]
-l= 
-2
-3⋅10 
-8
-  [m/s]⋅0.7⋅10.2⋅10 
-−9
-  [s]
-​
- = 
-2
-2.142 [m]
-​
- =1.071 [m]$
+$l = (c × v_p × t_m) / 2=(3∙10^8  [m/s]∙0,7∙10,2∙10^(-9)  [s])/2=2,142 [m]/2=1,071 [m]$
 Therefore, the calculated length of the cable using the time-domain reflectometry (TDR) method is 1.071 meters, which corresponds closely to the actual physical length of 1 meter, with only 0.71 centimeters of deviation — well within acceptable accuracy.
